@@ -4,20 +4,13 @@
 <title>Hello World Fun</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-function randomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters.mathFloor(Math.random() * 16);
-  }
-  return color;
-}
-function setBackground() {
-  document.body.style.backgroundColor = randomColor();
+function setBackground(colorValue) {
+  document.body.style.backgroundColor = colorValue;
 }
 </script>
 </head>
-<body class="bg-green-300 flex justify-center items-center h-screen" onclick="setBackground()">
+<body class="bg-green-300 flex justify-center items-center h-screen">
 <h2 class="text-2l font-bold">Hello World!</h2>
+<input type="color" id="colorPicker" onchange="setBackground(this.value);" class="mt_7em"></input>
 </body>
-</html>
+</html
